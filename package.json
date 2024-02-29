@@ -1,0 +1,23 @@
+{
+  "name": "hex-turbo-example",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "test": "turbo test",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/jest-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "prettier": "^3.1.1",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "dependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.10.6"
+  }
+}
