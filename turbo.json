@@ -1,25 +1,24 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
-  "pipeline": {
-    "dev": {
-      "dependsOn": ["^dev"],
-      "cache": false,
-      "persistent": true
-    },
+  "ui": "tui",
+  "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputMode": "new-only"
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
-    "start": {
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"]
+    },
+    "dev": {
       "cache": false,
       "persistent": true
     },
     "test": {
-      "outputMode": "new-only"
-    },
-    "lint": {
-      "outputMode": "new-only"
+      "dependsOn": ["@repo/vitest-config#build"]
     }
   }
 }
