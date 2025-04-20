@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-This repository is a simle Turborepo starter which contains the basic Turborepo setup and configuration.
+This repository is a simple Turborepo starter which contains the basic Turborepo setup and configuration.
 
 To start using, you can use the following commands:
 
@@ -19,32 +19,26 @@ pnpm test
 This project also has some configured some tools like:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [Jest](https://jestjs.io/) for unit testing
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- [Vitest](https://vitest.dev/) for unit testing
+- [Biome](https://biomejs.dev/) for code linting & formatting
 
 ## Applications
 
 Located under `/apps`, you will find an application.
 
-- `app-one`: a simple [Next.js](https://nextjs.org/) app
-
-
+- `web`: a simple [Next.js](https://nextjs.org/) app
 
 ## Packages
 
-In this example, there is a single shared package called `commerce` which is basic shared package which comes pre-configured.
-
-
+In this example, there is a shared package called `ui` which is basic [`shadcn/ui`](https://ui.shadcn.com/) package.
 
 ## Shared Configuration
 
-Located under `/packages/config` is all the shared configuration which the Turborepo uses. This is a great space to put handy developer tools and code cleanliness configuration.
+Located under `/packages/config` is all the shared configuration which the Turborepo uses. This is a great space to put
+handy developer tools and code cleanliness configuration.
 
 - `@repo/vitest-config`: `vitest` configurations for `base` and `ui` configurations
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-
 
 ## Useful Turborepo Links
 
