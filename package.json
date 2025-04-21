@@ -1,5 +1,5 @@
 {
-  "name": "hex-turbo-example",
+  "name": "repo",
   "private": true,
   "scripts": {
     "build": "turbo build",
