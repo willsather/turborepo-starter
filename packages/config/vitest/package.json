@@ -3,8 +3,14 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./base": "./dist/configs/base-config.js",
-    "./ui": "./dist/configs/ui-config.js"
+    "./base": {
+      "types": "./dist/configs/base-config.d.ts",
+      "default": "./dist/configs/base-config.js"
+    },
+    "./ui": {
+      "types": "./dist/configs/ui-config.d.ts",
+      "default": "./dist/configs/ui-config.js"
+    }
   },
   "scripts": {
     "build": "tsc"
