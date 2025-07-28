@@ -1,15 +1,16 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.2/schema.json",
-  "organizeImports": { "enabled": true },
+  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "files": {
-    "ignore": [
-      "node_modules",
-      "dist",
-      "playwright-report",
-      ".next",
-      ".vercel",
-      ".idea",
-      ".turbo"
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/dist",
+      "!**/playwright-report",
+      "!**/.next",
+      "!**/.vercel",
+      "!**/.idea",
+      "!**/.turbo"
     ]
   },
   "linter": {
