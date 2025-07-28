@@ -1,6 +1,8 @@
-import { Button } from "@repo/ui/components/button";
 import Image from "next/image";
 import Link from "next/link";
+
+import { Button } from "@repo/ui/components/button";
+
 import { showHeroCTA } from "@/lib/flags";
 
 export default async function Home() {

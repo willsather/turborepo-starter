@@ -1,6 +1,33 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
-  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              ":URL:",
+              ":BLANK_LINE:",
+              [
+                ":NODE:",
+                ":BUN:",
+                ":PACKAGE:",
+                ":PACKAGE_WITH_PROTOCOL:",
+                "!@repo/**"
+              ],
+              ":BLANK_LINE:",
+              "@repo/**",
+              ":BLANK_LINE:",
+              ":ALIAS:",
+              ":BLANK_LINE:",
+              ":PATH:"
+            ]
+          }
+        }
+      }
+    }
+  },
   "files": {
     "includes": [
       "**",
