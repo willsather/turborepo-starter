@@ -18,8 +18,8 @@ importers:
         specifier: ^29.5.14
         version: 29.5.14
       '@types/node':
-        specifier: ^24.0.13
-        version: 24.0.13
+        specifier: ^24.1.0
+        version: 24.1.0
       turbo:
         specifier: ^2.5.4
         version: 2.5.4
@@ -160,8 +160,8 @@ importers:
         specifier: ^4.1.11
         version: 4.1.11
       '@types/node':
-        specifier: ^24.0.13
-        version: 24.0.13
+        specifier: ^24.1.0
+        version: 24.1.0
       '@types/react':
         specifier: ^19.1.8
         version: 19.1.8
@@ -1060,9 +1060,6 @@ packages:
 
   '@types/jsdom@21.1.7':
     resolution: {integrity: sha512-yOriVnggzrnQ3a9OKOCxaVuSug3w3/SbOj5i7VwXWZEyUNl3bLF9V3MfxGbZKuwqJOQyRfqXyROBB1CoZLFWzA==}
-
-  '@types/node@24.0.13':
-    resolution: {integrity: sha512-Qm9OYVOFHFYg3wJoTSrz80hoec5Lia/dPp84do3X7dZvLikQvM1YpmvTBEdIr/e+U8HTkFjLHLnl78K/qjf+jQ==}
 
   '@types/node@24.1.0':
     resolution: {integrity: sha512-ut5FthK5moxFKH2T1CUOC6ctR67rQRvvHdFLCD2Ql6KXmMuCrjsSsRI9UsLCm9M18BMwClv4pn327UvB7eeO1w==}
@@ -2919,10 +2916,6 @@ snapshots:
       '@types/node': 24.1.0
       '@types/tough-cookie': 4.0.5
       parse5: 7.3.0
-
-  '@types/node@24.0.13':
-    dependencies:
-      undici-types: 7.8.0
 
   '@types/node@24.1.0':
     dependencies:
