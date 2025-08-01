@@ -15,7 +15,7 @@
     "@vercel/toolbar": "^0.1.38",
     "flags": "^4.0.1",
     "geist": "^1.4.2",
-    "lucide-react": "^0.487.0",
+    "lucide-react": "^0.535.0",
     "next": "^15.4.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
