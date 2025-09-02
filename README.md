@@ -8,11 +8,8 @@ To start using, you can use the following commands:
 
 ```zsh
 pnpm install
-
 pnpm dev
-
 pnpm build
-
 pnpm test
 ```
 
