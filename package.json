@@ -13,7 +13,7 @@
     "@repo/typescript-config": "workspace:*",
     "@types/jest": "^29.5.14",
     "@types/node": "^24.0.13",
-    "turbo": "^2.5.4"
+    "turbo": "^2.5.8"
   },
   "packageManager": "pnpm@10.7.0",
   "engines": {
