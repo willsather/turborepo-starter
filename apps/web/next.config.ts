@@ -1,6 +1,11 @@
+import { withVercelToolbar } from "@vercel/toolbar/plugins/next";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  cacheComponents: true,
+  experimental: {
+    turbopackFileSystemCacheForDev: true,
+  },
   async rewrites() {
     return [
       {
@@ -11,5 +16,5 @@ const nextConfig: NextConfig = {
   },
 };
 
-const withVercelToolbar = require("@vercel/toolbar/plugins/next")();
-export default withVercelToolbar(nextConfig);
+const toolbarConfig = withVercelToolbar()(nextConfig);
+export default toolbarConfig;
