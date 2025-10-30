@@ -12,8 +12,8 @@
     "@biomejs/biome": "2.1.2",
     "@repo/typescript-config": "workspace:*",
     "@types/jest": "^29.5.14",
-    "@types/node": "^24.0.13",
-    "turbo": "^2.5.4"
+    "@types/node": "^24.9.2",
+    "turbo": "^2.5.8"
   },
   "packageManager": "pnpm@10.7.0",
   "engines": {
