@@ -8,7 +8,7 @@ import type { ReactNode } from "react";
 import "@repo/ui/styles/tailwind.css";
 
 export const metadata: Metadata = {
-  title: "Turborepo Starter",
+  title: "turborepo-starter",
   description:
     "A focused monorepo starter with Next.js, shared UI, and consistent tooling.",
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],

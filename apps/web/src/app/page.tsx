@@ -3,95 +3,36 @@ import { Suspense } from "react";
 
 import { showHeroCTA } from "@/lib/flags";
 
-const workspace = [
-  ["apps/web", "Next.js application"],
-  ["packages/ui", "shared components and styles"],
-  ["packages/config", "shared project configuration"],
-] as const;
-
-const commands = [
-  ["pnpm dev", "start the development workspace"],
-  ["pnpm build", "build every package and app"],
-  ["pnpm test", "run the test suite"],
-] as const;
+import { CopyCommand } from "./copy-command";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] px-6 py-12 text-neutral-100 sm:px-10 sm:py-16">
-      <div className="mx-auto max-w-2xl">
-        <header className="border-neutral-800 border-b pb-12">
-          <p className="mb-6 font-mono text-neutral-500 text-xs uppercase tracking-[0.18em]">
-            Turborepo starter / web
-          </p>
-          <h1 className="max-w-xl font-semibold text-4xl text-white tracking-[-0.04em] sm:text-5xl">
-            A focused starting point for modern web projects.
-          </h1>
-          <p className="mt-6 max-w-lg text-base text-neutral-400 leading-7">
-            A small, production-ready monorepo with a Next.js app, shared UI,
-            consistent tooling, and room to grow without getting in the way.
-          </p>
-        </header>
+    <main className="relative flex min-h-screen items-center justify-center bg-black px-6 py-20 text-neutral-100">
+      <span className="absolute top-6 left-6 font-mono text-neutral-500 text-xs">
+        turborepo-starter
+      </span>
 
-        <div className="divide-y divide-neutral-800">
-          <section className="grid gap-6 py-10 sm:grid-cols-[8rem_1fr]">
-            <h2 className="font-mono text-neutral-500 text-xs uppercase tracking-wider">
-              Workspace
-            </h2>
-            <ul className="space-y-5">
-              {workspace.map(([name, description]) => (
-                <li key={name} className="group">
-                  <p className="font-mono text-neutral-200 text-sm transition-colors group-hover:text-white">
-                    {name}
-                  </p>
-                  <p className="mt-1 text-neutral-500 text-sm">{description}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
+      <div className="w-full max-w-2xl text-center">
+        <h1 className="font-bold text-4xl text-white tracking-tight sm:text-5xl">
+          Start building together.
+        </h1>
+        <p className="mx-auto mt-5 max-w-xl font-mono text-neutral-500 text-sm leading-relaxed">
+          a small turborepo with a next.js app, shared ui, typescript, biome,
+          vitest, and consistent tooling across the workspace.
+        </p>
 
-          <section className="grid gap-6 py-10 sm:grid-cols-[8rem_1fr]">
-            <h2 className="font-mono text-neutral-500 text-xs uppercase tracking-wider">
-              Commands
-            </h2>
-            <ul className="space-y-5">
-              {commands.map(([command, description]) => (
-                <li key={command}>
-                  <code className="text-neutral-200 text-sm">$ {command}</code>
-                  <p className="mt-1 text-neutral-500 text-sm">{description}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
+        <code className="mt-10 inline-flex items-center gap-3 rounded-full border border-neutral-800 bg-neutral-950 py-3.5 pr-4 pl-5 font-mono text-neutral-300 text-sm">
+          pnpm create ws-starter
+          <CopyCommand />
+        </code>
 
-          <section className="grid gap-6 py-10 sm:grid-cols-[8rem_1fr]">
-            <h2 className="font-mono text-neutral-500 text-xs uppercase tracking-wider">
-              Resources
-            </h2>
-            <nav aria-label="Project resources">
-              <ul className="space-y-3 font-mono text-sm">
-                <li>
-                  <Link
-                    className="text-neutral-300 transition-colors hover:text-white"
-                    href="https://turbo.build/repo/docs"
-                  >
-                    Turborepo documentation ↗
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-neutral-300 transition-colors hover:text-white"
-                    href="https://nextjs.org/docs"
-                  >
-                    Next.js documentation ↗
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </section>
-        </div>
-
-        <footer className="flex min-h-16 items-start justify-between gap-6 border-neutral-800 border-t pt-6 font-mono text-xs">
-          <p className="text-neutral-600">Ready to make your own.</p>
+        <footer className="mt-8 flex items-center justify-center gap-5 font-mono text-neutral-600 text-xs">
+          <Link
+            href="https://turbo.build/repo/docs"
+            className="transition-colors hover:text-white"
+          >
+            docs →
+          </Link>
           <Suspense fallback={null}>
             <CTA />
           </Suspense>
@@ -110,10 +51,10 @@ async function CTA() {
 
   return (
     <Link
-      className="text-neutral-400 transition-colors hover:text-white"
       href="https://github.com/willsather/turborepo-starter"
+      className="transition-colors hover:text-white"
     >
-      View source →
+      github →
     </Link>
   );
 }
