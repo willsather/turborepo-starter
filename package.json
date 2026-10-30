@@ -9,13 +9,13 @@
     "lint:fix": "biome check --write"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.10",
+    "@biomejs/biome": "2.6.3",
     "@repo/typescript-config": "workspace:*",
     "@types/jest": "30.0.0",
-    "@types/node": "26.3.0",
-    "turbo": "2.10.12"
+    "@types/node": "26.6.5",
+    "turbo": "2.11.10"
   },
-  "packageManager": "pnpm@10.34.5",
+  "packageManager": "pnpm@12.16.1",
   "engines": {
     "node": "26.x"
   }

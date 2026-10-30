@@ -2,3 +2,5 @@ packages:
   - "apps/*"
   - "packages/*"
   - "packages/config/*"
+allowBuilds:
+  "@swc/core@1.16.20": true
